@@ -3,6 +3,7 @@ package com.pixl.dnddiceroller;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +11,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.squareup.seismic.ShakeDetector;
+
 import java.util.concurrent.ThreadLocalRandom;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ShakeDetector.Listener {
 
     ImageButton fourSidedDie;
     Button rollButton;
@@ -21,7 +24,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //the XML file below is the main screen
+
+        SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        ShakeDetector sd = new ShakeDetector(this);
+        sd.start(sensorManager);
+
         setContentView(R.layout.activity_main);
 
         fourSidedDie = findViewById(R.id.fourSidedDie);
@@ -49,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 numberText.setText(String.valueOf(dieRoll(4)));
             }
         });
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override public void hearShake() {
+        numberText.setText(String.valueOf(String.valueOf(dieRoll(4))));
     }
 
     //this function simulates the dice being rolled
