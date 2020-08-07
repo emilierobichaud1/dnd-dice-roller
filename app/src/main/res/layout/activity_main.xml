@@ -20,14 +20,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/dnd" />
+            app:srcCompat="@drawable/dnd"
+            android:contentDescription="@string/dnd_logo" />
 
         <TextView
             android:id="@+id/numberText"
@@ -71,14 +73,16 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_purp" />
+                android:src="@drawable/d4_bar_purp"
+                android:contentDescription="@string/four_sided_die" />
 
             <ImageButton
                 android:id="@+id/sixSidedDie"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d6_bar_red" />
+                android:src="@drawable/d6_bar_red"
+                android:contentDescription="@string/six_sided_die" />
 
             <ImageButton
                 android:id="@+id/eightSidedDie"
@@ -86,7 +90,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_orange" />
+                android:src="@drawable/d4_bar_orange"
+                android:contentDescription="@string/eight_sided_die" />
 
             <ImageButton
                 android:id="@+id/tenSidedDie"
@@ -95,7 +100,8 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:src="@drawable/d4_bar_purp"
-                android:tint="#FFEB3B" />
+                android:tint="#FFEB3B"
+                android:contentDescription="@string/ten_sided_die" />
 
             <ImageButton
                 android:id="@+id/twelveSidedDie"
@@ -104,7 +110,8 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:src="@drawable/d4_bar_purp"
-                android:tint="#4CAF50" />
+                android:tint="#4CAF50"
+                android:contentDescription="@string/twelve_sided_die" />
 
             <ImageButton
                 android:id="@+id/twentySidedDie"
@@ -113,7 +120,8 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:src="@drawable/d4_bar_purp"
-                android:tint="#3F51B5" />
+                android:tint="#3F51B5"
+                android:contentDescription="@string/twenty_sided_die" />
 
         </LinearLayout>
     </HorizontalScrollView>

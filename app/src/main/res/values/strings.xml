@@ -14,4 +14,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="number">NUMBER</string>
     <string name="roll">Roll</string>
+    <string name="dnd_logo">dnd logo</string>
+    <string name="four_sided_die">four sided die</string>
+    <string name="six_sided_die">six sided die</string>
+    <string name="eight_sided_die">eight sided die</string>
+    <string name="ten_sided_die">ten sided die</string>
+    <string name="twelve_sided_die">twelve sided die</string>
+    <string name="twenty_sided_die">twenty sided die</string>
 </resources>

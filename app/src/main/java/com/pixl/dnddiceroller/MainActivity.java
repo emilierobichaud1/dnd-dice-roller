@@ -3,7 +3,6 @@ package com.pixl.dnddiceroller;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.PorterDuff;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Build;
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         fourSidedDie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fourSidedDie.setColorFilter(0xCCFFFFFF);
+                fourSidedDie.setColorFilter(0xE6FFFFFF);
                 fourSidedDie.setSelected(true);
 
                 sixSidedDie.setSelected(false);
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         sixSidedDie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sixSidedDie.setColorFilter(0xCCFFFFFF);
+                sixSidedDie.setColorFilter(0xE6FFFFFF);
                 sixSidedDie.setSelected(true);
 
                 fourSidedDie.setSelected(false);
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         eightSidedDie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eightSidedDie.setColorFilter(0xCCFFFFFF);
+                eightSidedDie.setColorFilter(0xE6FFFFFF);
                 eightSidedDie.setSelected(true);
 
                 fourSidedDie.setSelected(false);
@@ -120,22 +119,22 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override public void hearShake() {
         if(fourSidedDie.isSelected()) {
-            numberText.setText(String.valueOf(String.valueOf(dieRoll(4))));
+            numberText.setText(String.valueOf(dieRoll(4)));
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(sixSidedDie.isSelected()) {
-            numberText.setText(String.valueOf(String.valueOf(dieRoll(6))));
+            numberText.setText(String.valueOf(dieRoll(6)));
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(eightSidedDie.isSelected()) {
-            numberText.setText(String.valueOf(String.valueOf(dieRoll(8))));
+            numberText.setText(String.valueOf(dieRoll(8)));
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(tenSidedDie.isSelected()) {
-            numberText.setText(String.valueOf(String.valueOf(dieRoll(10))));
+            numberText.setText(String.valueOf(dieRoll(10)));
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
