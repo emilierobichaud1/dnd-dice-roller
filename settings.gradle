@@ -1,0 +1,2 @@
+rootProject.name='DnD Dice Roller'
+include ':app'
