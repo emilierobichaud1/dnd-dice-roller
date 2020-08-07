@@ -3,7 +3,11 @@ package com.pixl.dnddiceroller;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.pixl.dnddiceroller.R;
+
+import android.graphics.PorterDuff;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +22,6 @@ import java.util.concurrent.ThreadLocalRandom;
 public class MainActivity extends AppCompatActivity implements ShakeDetector.Listener {
 
     ImageButton fourSidedDie;
-    Button rollButton;
     TextView numberText;
 
     @Override
@@ -33,27 +36,18 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
 
         fourSidedDie = findViewById(R.id.fourSidedDie);
         numberText = findViewById(R.id.numberText);
-        rollButton = findViewById(R.id.rollButton);
-        rollButton.setEnabled(false);
+
+        //set die to unselected by default
+        fourSidedDie.setSelected(false);
 
 
-        //need img buttons, logic for buttons
+
 
         fourSidedDie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //what happens when die is selected?
-                //image shows up in center
-                // and roll button is clickable
-                rollButton.setEnabled(true);
-            }
-        });
-
-        rollButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-            @Override
-            public void onClick(View v) {
-                numberText.setText(String.valueOf(dieRoll(4)));
+                fourSidedDie.setColorFilter(0x80FFFFFF, PorterDuff.Mode.MULTIPLY);
+                fourSidedDie.setSelected(true);
             }
         });
 
@@ -61,7 +55,16 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override public void hearShake() {
-        numberText.setText(String.valueOf(String.valueOf(dieRoll(4))));
+        if(fourSidedDie.isSelected()) {
+            numberText.setText(String.valueOf(String.valueOf(dieRoll(4))));
+            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
+            mp.start();
+        }
+/*        if(sixSidedDie.isSelected()) {
+            numberText.setText(String.valueOf(String.valueOf(dieRoll(6))));
+            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
+        mp.start();
+        }*/
     }
 
     //this function simulates the dice being rolled
