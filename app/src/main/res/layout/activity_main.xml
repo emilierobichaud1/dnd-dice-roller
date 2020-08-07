@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111735"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -22,6 +22,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/dnd" />
+
         <TextView
             android:id="@+id/numberText"
             android:layout_width="match_parent"
@@ -30,6 +37,8 @@
             android:text="@string/number"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
+
+
 
     </LinearLayout>
 
@@ -50,11 +59,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/fourSidedDie"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="#00FFFFFF"
-            android:src="@drawable/d4_bar_purp" />
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/fourSidedDie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/d4_bar_purp" />
+
+            <ImageButton
+                android:id="@+id/sixSidedDie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                android:src="@drawable/d6_bar_red" />
+
+            <ImageButton
+                android:id="@+id/eightSidedDie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/d4_bar_orange" />
+
+            <ImageButton
+                android:id="@+id/tenSidedDie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/d4_bar_purp"
+                android:tint="#FFEB3B" />
+
+            <ImageButton
+                android:id="@+id/twelveSidedDie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/d4_bar_purp"
+                android:tint="#4CAF50" />
+
+            <ImageButton
+                android:id="@+id/twentySidedDie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/d4_bar_purp"
+                android:tint="#3F51B5" />
+
+        </LinearLayout>
     </HorizontalScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
