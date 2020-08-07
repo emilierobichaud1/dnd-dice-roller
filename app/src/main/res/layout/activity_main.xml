@@ -61,6 +61,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="#00FFFFFF"
-            android:src="@drawable/d4_bar" />
+            android:src="@drawable/d4_bar_purp" />
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
