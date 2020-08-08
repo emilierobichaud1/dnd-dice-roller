@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
 
         //initialize all die as invisible
 
-/*        fourSideImage.setVisibility(View.INVISIBLE);
+/*      fourSideImage.setVisibility(View.INVISIBLE);
         sixSideImage.setVisibility(View.INVISIBLE);
         eightSideImage.setVisibility(View.INVISIBLE);
         tenSideImage.setVisibility(View.INVISIBLE);
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
 
     }
 
-    // TODO add action for 12, 20 die
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override public void hearShake() {
         if(fourSidedDie.isSelected()) {
