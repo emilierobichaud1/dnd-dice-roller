@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.seismic.ShakeDetector;
@@ -23,6 +24,13 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
     ImageButton tenSidedDie;
     ImageButton twelveSidedDie;
     ImageButton twentySidedDie;
+    ImageView dndIcon;
+    ImageView fourSideImage;
+    ImageView sixSideImage;
+    ImageView eightSideImage;
+    ImageView tenSideImage;
+    ImageView twelveSideImage;
+    ImageView twentySideImage;
     TextView numberText;
 
     @Override
@@ -48,6 +56,19 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         //initialize number text
         numberText = findViewById(R.id.numberText);
 
+        //TODO initialize images using the id given in xml code
+        //initialize imageviews
+        dndIcon = findViewById(R.id.dndIcon);
+
+        //initialize all die as invisible
+
+/*        fourSideImage.setVisibility(View.INVISIBLE);
+        sixSideImage.setVisibility(View.INVISIBLE);
+        eightSideImage.setVisibility(View.INVISIBLE);
+        tenSideImage.setVisibility(View.INVISIBLE);
+        twelveSideImage.setVisibility(View.INVISIBLE);
+        twentySideImage.setVisibility(View.INVISIBLE);*/
+
         //set all dice to unselected by default
         fourSidedDie.setSelected(false);
         sixSidedDie.setSelected(false);
@@ -56,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         twelveSidedDie.setSelected(false);
         twentySidedDie.setSelected(false);
 
+        //TODO add onClickListener for 10, 12, 20
         //set on click listeners for each image button
         fourSidedDie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +95,14 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 twelveSidedDie.setColorFilter(null);
                 twentySidedDie.setSelected(false);
                 twentySidedDie.setColorFilter(null);
+
+                //TODO set visibility for each image
+                //show icon on click
+                //fourSideImage.setVisibility(View.VISIBLE);
+
+                //TODO the rest should be invisible
+                dndIcon.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -114,8 +144,66 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
             }
         });
 
+        tenSidedDie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tenSidedDie.setColorFilter(0xE6FFFFFF);
+                tenSidedDie.setSelected(true);
+
+                fourSidedDie.setSelected(false);
+                fourSidedDie.setColorFilter(null);
+                sixSidedDie.setSelected(false);
+                sixSidedDie.setColorFilter(null);
+                twelveSidedDie.setSelected(false);
+                twelveSidedDie.setColorFilter(null);
+                eightSidedDie.setSelected(false);
+                eightSidedDie.setColorFilter(null);
+                twentySidedDie.setSelected(false);
+                twentySidedDie.setColorFilter(null);
+            }
+        });
+
+        twelveSidedDie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                twelveSidedDie.setColorFilter(0xE6FFFFFF);
+                twelveSidedDie.setSelected(true);
+
+                fourSidedDie.setSelected(false);
+                fourSidedDie.setColorFilter(null);
+                sixSidedDie.setSelected(false);
+                sixSidedDie.setColorFilter(null);
+                tenSidedDie.setSelected(false);
+                tenSidedDie.setColorFilter(null);
+                eightSidedDie.setSelected(false);
+                eightSidedDie.setColorFilter(null);
+                twentySidedDie.setSelected(false);
+                twentySidedDie.setColorFilter(null);
+            }
+        });
+
+        twentySidedDie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                twentySidedDie.setColorFilter(0xE6FFFFFF);
+                twentySidedDie.setSelected(true);
+
+                fourSidedDie.setSelected(false);
+                fourSidedDie.setColorFilter(null);
+                sixSidedDie.setSelected(false);
+                sixSidedDie.setColorFilter(null);
+                tenSidedDie.setSelected(false);
+                tenSidedDie.setColorFilter(null);
+                eightSidedDie.setSelected(false);
+                eightSidedDie.setColorFilter(null);
+                twelveSidedDie.setSelected(false);
+                twelveSidedDie.setColorFilter(null);
+            }
+        });
+
     }
 
+    // TODO add action for 12, 20 die
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override public void hearShake() {
         if(fourSidedDie.isSelected()) {
@@ -135,6 +223,16 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         }
         if(tenSidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(10)));
+            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
+            mp.start();
+        }
+        if(twelveSidedDie.isSelected()) {
+            numberText.setText(String.valueOf(dieRoll(12)));
+            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
+            mp.start();
+        }
+        if(twentySidedDie.isSelected()) {
+            numberText.setText(String.valueOf(dieRoll(20)));
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }

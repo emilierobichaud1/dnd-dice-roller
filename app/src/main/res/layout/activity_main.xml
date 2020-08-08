@@ -24,7 +24,7 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/dndIcon"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_marginTop="100dp"
@@ -80,9 +80,10 @@
                 android:id="@+id/sixSidedDie"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d6_bar_red"
-                android:contentDescription="@string/six_sided_die" />
+                android:contentDescription="@string/six_sided_die"
+                android:src="@drawable/d6_bar_blue" />
 
             <ImageButton
                 android:id="@+id/eightSidedDie"
@@ -90,18 +91,17 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_orange"
-                android:contentDescription="@string/eight_sided_die" />
+                android:contentDescription="@string/eight_sided_die"
+                android:src="@drawable/d8_bar_green" />
 
             <ImageButton
                 android:id="@+id/tenSidedDie"
-                android:layout_width="wrap_content"
+                android:layout_width="138dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_purp"
-                android:tint="#FFEB3B"
-                android:contentDescription="@string/ten_sided_die" />
+                android:contentDescription="@string/ten_sided_die"
+                android:src="@drawable/d10_bar_yellow" />
 
             <ImageButton
                 android:id="@+id/twelveSidedDie"
@@ -109,9 +109,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_purp"
-                android:tint="#4CAF50"
-                android:contentDescription="@string/twelve_sided_die" />
+                android:contentDescription="@string/twelve_sided_die"
+                android:src="@drawable/d12_bar_orange" />
 
             <ImageButton
                 android:id="@+id/twentySidedDie"
@@ -119,9 +118,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_purp"
-                android:tint="#3F51B5"
-                android:contentDescription="@string/twenty_sided_die" />
+                android:contentDescription="@string/twenty_sided_die"
+                android:src="@drawable/d20_bar_red" />
 
         </LinearLayout>
     </HorizontalScrollView>
