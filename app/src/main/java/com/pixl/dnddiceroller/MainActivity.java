@@ -59,15 +59,23 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         //TODO initialize images using the id given in xml code
         //initialize imageviews
         dndIcon = findViewById(R.id.dndIcon);
-
+        fourSideImage = findViewById(R.id.fourSideImage);
+        sixSideImage = findViewById(R.id.sixSideImage);
+        eightSideImage = findViewById(R.id.eightSideImage);
+        tenSideImage = findViewById(R.id.tenSideImage);
+        twelveSideImage = findViewById(R.id.twelveSideImage);
+        twentySideImage = findViewById(R.id.twentySideImage);
         //initialize all die as invisible
 
-/*      fourSideImage.setVisibility(View.INVISIBLE);
+        //make dnd icon visible when program first starts
+        dndIcon.setVisibility(View.VISIBLE);
+
+        fourSideImage.setVisibility(View.GONE);
         sixSideImage.setVisibility(View.INVISIBLE);
         eightSideImage.setVisibility(View.INVISIBLE);
         tenSideImage.setVisibility(View.INVISIBLE);
         twelveSideImage.setVisibility(View.INVISIBLE);
-        twentySideImage.setVisibility(View.INVISIBLE);*/
+        twentySideImage.setVisibility(View.INVISIBLE);
 
         //set all dice to unselected by default
         fourSidedDie.setSelected(false);
@@ -98,10 +106,16 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
 
                 //TODO set visibility for each image
                 //show icon on click
-                //fourSideImage.setVisibility(View.VISIBLE);
+                fourSideImage.setVisibility(View.VISIBLE);
 
                 //TODO the rest should be invisible
-                dndIcon.setVisibility(View.INVISIBLE);
+                //TODO all insivibles need to be GONE
+                dndIcon.setVisibility(View.GONE);
+                sixSideImage.setVisibility(View.GONE);
+                eightSideImage.setVisibility(View.GONE);
+                tenSideImage.setVisibility(View.GONE);
+                twelveSideImage.setVisibility(View.GONE);
+                twentySideImage.setVisibility(View.GONE);
 
             }
         });
@@ -122,6 +136,19 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 twelveSidedDie.setColorFilter(null);
                 twentySidedDie.setSelected(false);
                 twentySidedDie.setColorFilter(null);
+
+                //TODO set visibility for each image
+                //show icon on click
+                sixSideImage.setVisibility(View.VISIBLE);
+
+                //TODO the rest should be invisible
+                //TODO all insivibles need to be GONE
+                dndIcon.setVisibility(View.GONE);
+                fourSideImage.setVisibility(View.GONE);
+                eightSideImage.setVisibility(View.GONE);
+                tenSideImage.setVisibility(View.GONE);
+                twelveSideImage.setVisibility(View.GONE);
+                twentySideImage.setVisibility(View.GONE);
             }
         });
 
@@ -141,6 +168,19 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 twelveSidedDie.setColorFilter(null);
                 twentySidedDie.setSelected(false);
                 twentySidedDie.setColorFilter(null);
+
+                //TODO set visibility for each image
+                //show icon on click
+                eightSideImage.setVisibility(View.VISIBLE);
+
+                //TODO the rest should be invisible
+                //TODO all insivibles need to be GONE
+                dndIcon.setVisibility(View.GONE);
+                fourSideImage.setVisibility(View.GONE);
+                sixSideImage.setVisibility(View.GONE);
+                tenSideImage.setVisibility(View.GONE);
+                twelveSideImage.setVisibility(View.GONE);
+                twentySideImage.setVisibility(View.GONE);
             }
         });
 
@@ -160,6 +200,19 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 eightSidedDie.setColorFilter(null);
                 twentySidedDie.setSelected(false);
                 twentySidedDie.setColorFilter(null);
+
+                //TODO set visibility for each image
+                //show icon on click
+                tenSideImage.setVisibility(View.VISIBLE);
+
+                //TODO the rest should be invisible
+                //TODO all insivibles need to be GONE
+                dndIcon.setVisibility(View.GONE);
+                fourSideImage.setVisibility(View.GONE);
+                sixSideImage.setVisibility(View.GONE);
+                eightSideImage.setVisibility(View.GONE);
+                twelveSideImage.setVisibility(View.GONE);
+                twentySideImage.setVisibility(View.GONE);
             }
         });
 
@@ -179,6 +232,19 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 eightSidedDie.setColorFilter(null);
                 twentySidedDie.setSelected(false);
                 twentySidedDie.setColorFilter(null);
+
+                //TODO set visibility for each image
+                //show icon on click
+                twelveSideImage.setVisibility(View.VISIBLE);
+
+                //TODO the rest should be invisible
+                //TODO all insivibles need to be GONE
+                dndIcon.setVisibility(View.GONE);
+                fourSideImage.setVisibility(View.GONE);
+                sixSideImage.setVisibility(View.GONE);
+                eightSideImage.setVisibility(View.GONE);
+                tenSideImage.setVisibility(View.GONE);
+                twentySideImage.setVisibility(View.GONE);
             }
         });
 
@@ -198,6 +264,19 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
                 eightSidedDie.setColorFilter(null);
                 twelveSidedDie.setSelected(false);
                 twelveSidedDie.setColorFilter(null);
+
+                //TODO set visibility for each image
+                //show icon on click
+                twentySideImage.setVisibility(View.VISIBLE);
+
+                //TODO the rest should be invisible
+                //TODO all insivibles need to be GONE
+                dndIcon.setVisibility(View.GONE);
+                fourSideImage.setVisibility(View.GONE);
+                sixSideImage.setVisibility(View.GONE);
+                eightSideImage.setVisibility(View.GONE);
+                tenSideImage.setVisibility(View.GONE);
+                twelveSideImage.setVisibility(View.GONE);
             }
         });
 

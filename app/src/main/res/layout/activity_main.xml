@@ -23,13 +23,67 @@
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         tools:ignore="UseCompoundDrawables">
 
-        <!--<ImageView
+        <ImageView
         android:id="@+id/dndIcon"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="100dp"
         app:srcCompat="@drawable/dnd"
-        android:contentDescription="@string/dnd_logo" />-->
+        android:contentDescription="@string/dnd_logo" />
+
+        <ImageView
+            android:id="@+id/fourSideImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/d4_image350"
+            android:contentDescription="@string/four_sided_die" />
+
+        <ImageView
+            android:id="@+id/sixSideImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/d6_image350"
+            android:contentDescription="@string/six_sided_die" />
+
+        <ImageView
+            android:id="@+id/eightSideImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/d8_image350"
+            android:contentDescription="@string/eight_sided_die" />
+
+        <ImageView
+            android:id="@+id/tenSideImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/d10_image350"
+            android:contentDescription="@string/ten_sided_die" />
+
+        <ImageView
+            android:id="@+id/twelveSideImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/d12_image350"
+            android:contentDescription="@string/twelve_sided_die" />
+
+        <ImageView
+            android:id="@+id/twentySideImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/d20_image350"
+            android:contentDescription="@string/twenty_sided_die" />
 
         <TextView
             android:id="@+id/numberText"
