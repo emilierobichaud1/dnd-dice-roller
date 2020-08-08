@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
 
         //initialize number text
         numberText = findViewById(R.id.numberText);
+        numberText.setVisibility(View.VISIBLE);
 
         //TODO initialize images using the id given in xml code
         //initialize imageviews
@@ -71,11 +72,11 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
         dndIcon.setVisibility(View.VISIBLE);
 
         fourSideImage.setVisibility(View.GONE);
-        sixSideImage.setVisibility(View.INVISIBLE);
-        eightSideImage.setVisibility(View.INVISIBLE);
-        tenSideImage.setVisibility(View.INVISIBLE);
-        twelveSideImage.setVisibility(View.INVISIBLE);
-        twentySideImage.setVisibility(View.INVISIBLE);
+        sixSideImage.setVisibility(View.GONE);
+        eightSideImage.setVisibility(View.GONE);
+        tenSideImage.setVisibility(View.GONE);
+        twelveSideImage.setVisibility(View.GONE);
+        twentySideImage.setVisibility(View.GONE);
 
         //set all dice to unselected by default
         fourSidedDie.setSelected(false);
@@ -287,31 +288,37 @@ public class MainActivity extends AppCompatActivity implements ShakeDetector.Lis
     @Override public void hearShake() {
         if(fourSidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(4)));
+            numberText.setTextSize(70);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(sixSidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(6)));
+            numberText.setTextSize(70);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(eightSidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(8)));
+            numberText.setTextSize(70);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(tenSidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(10)));
+            numberText.setTextSize(70);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(twelveSidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(12)));
+            numberText.setTextSize(70);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }
         if(twentySidedDie.isSelected()) {
             numberText.setText(String.valueOf(dieRoll(20)));
+            numberText.setTextSize(70);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.dice);
             mp.start();
         }

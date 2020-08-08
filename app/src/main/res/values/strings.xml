@@ -21,4 +21,5 @@
     <string name="ten_sided_die">ten sided die</string>
     <string name="twelve_sided_die">twelve sided die</string>
     <string name="twenty_sided_die">twenty sided die</string>
+    <string name="select_your_dice_n_shake_your_phone_to_roll">Select your dice +\n shake your phone to roll!</string>
 </resources>

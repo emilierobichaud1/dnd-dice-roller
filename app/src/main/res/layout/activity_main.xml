@@ -90,9 +90,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/number"
+            android:text="@string/select_your_dice_n_shake_your_phone_to_roll"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="34sp" />
 
 
 
@@ -123,16 +123,16 @@
 
             <ImageButton
                 android:id="@+id/fourSidedDie"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:src="@drawable/d4_bar_purp"
-                android:contentDescription="@string/four_sided_die" />
+                android:contentDescription="@string/four_sided_die"
+                android:src="@drawable/d4_bar_purp" />
 
             <ImageButton
                 android:id="@+id/sixSidedDie"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
@@ -141,8 +141,9 @@
 
             <ImageButton
                 android:id="@+id/eightSidedDie"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/eight_sided_die"
@@ -150,8 +151,9 @@
 
             <ImageButton
                 android:id="@+id/tenSidedDie"
-                android:layout_width="148dp"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="13dp"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/ten_sided_die"
@@ -159,8 +161,9 @@
 
             <ImageButton
                 android:id="@+id/twelveSidedDie"
-                android:layout_width="121dp"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/twelve_sided_die"
@@ -168,7 +171,7 @@
 
             <ImageButton
                 android:id="@+id/twentySidedDie"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
